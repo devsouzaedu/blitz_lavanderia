@@ -1,0 +1,311 @@
+/*---- navbar ------*/
+.navbar {
+    background-color: #00bfff;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+}
+
+.navbar.navbar-light.bg-light {
+    background-color: #00bfff !important;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100%;
+}
+
+/*---- Div1Cta ------*/
+.ldpage1 {
+    position: relative;
+    text-align: center;
+}
+
+.bg_lavanderia_div1 {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.mashmelo {
+    width: auto;
+    max-width: 70%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+}
+
+.mashmelo.show {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.h1masho {
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    max-width: 70%;
+}
+
+.h1masho.show {
+    animation: slideInFromRight 2s ease-in-out forwards;
+}
+
+.buttons {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #0084ff !important;
+}
+
+.button2 {
+    background-color: #ffffff !important;
+}
+
+/*---- Div2CardsPlan ------*/
+.plan-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.card {
+    width: 30%;
+    text-align: center;
+    background-color: #00bfff;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+.catfaceicon {
+    max-width: 50px;
+}
+
+/*---- Whatsapp Button ------*/
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-button img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.whatsapp-button-container {
+    text-align: center;
+    padding: 30px 3px;
+}
+
+/*---- Endereço H1 ------*/
+.address-section {
+    background-color: #00d5ff;
+    padding: 20px;
+    text-align: center;
+    z-index: 1300;
+}
+
+/*---- Mapa Google ------*/
+.google-map {
+    /* Adicione estilos conforme necessário */
+}
+
+/*---- Media queries ------*/
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+        margin: 0;
+    }
+
+    .navbar {
+        background-color: #00bfff;
+        padding: 10px;
+        min-height: auto;
+    }
+
+    .navbar-lg {
+        min-height: 80px;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #00bfff;
+        z-index: 1000;
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000;
+        font-size: 18px;
+    }
+
+    .plan-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin: 20px;
+    }
+
+    .ldpage1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Garante que o ldpage1 ocupe 100% da altura da viewport */
+    }
+
+    .bg_lavanderia_div1 {
+        width: 100%;
+        height: 100%; /* Agora ocupa 100% da altura do ldpage1 */
+        object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível */
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Ocupa 100% da altura do ldpage1 */
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .mashmelo {
+        max-width: 90%;
+        margin-bottom: 20px; /* Adiciona margem inferior */
+        order: 1; /* Define a ordem do elemento, neste caso, acima */
+    }
+
+    .h1masho {
+        color: aliceblue;
+        max-width: 70%;
+        text-align: center; /* Centraliza o texto */
+        margin-bottom: 20px; /* Adiciona margem inferior */
+        order: 2; /* Define a ordem do elemento, neste caso, abaixo */
+    }
+
+    .buttons {
+        top: 90%;
+    }
+}
+
+
+/*---- Animações ------*/
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
