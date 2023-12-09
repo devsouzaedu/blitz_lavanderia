@@ -47,11 +47,6 @@
     left: 30%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    opacity: 0;
-}
-
-.mashmelo.show {
-    animation: fadeIn 2s ease-in-out forwards;
 }
 
 .h1masho {
@@ -61,12 +56,7 @@
     left: 70%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    opacity: 0;
     max-width: 70%;
-}
-
-.h1masho.show {
-    animation: slideInFromRight 2s ease-in-out forwards;
 }
 
 .buttons {
@@ -242,53 +232,89 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh; /* Garante que o ldpage1 ocupe 100% da altura da viewport */
+        height: auto;
+        padding: 20px;
+        position: relative; /* Adiciona position relative para criar um contexto de posicionamento */
     }
-
+    
     .bg_lavanderia_div1 {
         width: 100%;
-        height: 100%; /* Agora ocupa 100% da altura do ldpage1 */
-        object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível */
+        height: 100%; /* Cobrir o div1 verticalmente */
+        object-fit: cover; /* Ajustar para cobrir todo o contêiner */
+        position: absolute; /* Posiciona a imagem absolutamente dentro do contexto de ldpage1 */
+        z-index: -10; /* Coloca a imagem atrás dos outros elementos */
     }
-
+    
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; /* Ocupa 100% da altura do ldpage1 */
+        height: 100%;
         background: rgba(0, 0, 0, 0.5);
+        z-index: -5;
     }
 
+    content {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+        z-index: 1000 !important;
+    }
+    
+    .mashmelo,
+    .h1masho,
     .buttons {
+        position: relative; /* Mantém a posição relativa para os outros elementos */
+        z-index: 1000 !important; /* Garante que os outros elementos estejam acima da imagem de fundo */
+    }
+    
+    .mashmelo {
+        max-width: 100%;
+        width: 70%;
+        margin-bottom: 20px;
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        z-index: 1000 !important;
+    }
+    
+    .h1masho {
+        color: aliceblue;
+        text-align: center;
+        order: 2;
+        max-width: none;
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        z-index: 1000 !important;
+    }
+    
+    .buttons {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
+        z-index: 1000 !important;
     }
-
-    .mashmelo {
-        max-width: 90%;
-        margin-bottom: 20px; /* Adiciona margem inferior */
-        order: 1; /* Define a ordem do elemento, neste caso, acima */
+    
+    .buttons button {
+        margin-bottom: 10px;
+        z-index: 1000 !important;
     }
-
-    .h1masho {
-        color: aliceblue;
-        max-width: 70%;
-        text-align: center; /* Centraliza o texto */
-        margin-bottom: 20px; /* Adiciona margem inferior */
-        order: 2; /* Define a ordem do elemento, neste caso, abaixo */
-    }
-
-    .buttons {
-        top: 90%;
-    }
+    
 }
-
+    
 
 /*---- Animações ------*/
-@keyframes slideInFromRight {
+ /*----  @keyframes slideInFromRight {
     from {
         opacity: 0;
         transform: translateX(100%) translateX(-50%);
