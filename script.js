@@ -16,3 +16,9 @@ button2.addEventListener('click', function(event) {
   });
 });
  
+
+const button1 = document.querySelector('.button1');
+
+button1.addEventListener('click', function(event) {
+  window.open('https://wa.me/5511989531411', '_blank');
+});
