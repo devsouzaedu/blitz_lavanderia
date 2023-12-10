@@ -78,10 +78,12 @@
 
 .button1 {
     background-color: #0084ff !important;
+    border-radius: 10px;
 }
 
 .button2 {
     background-color: #ffffff !important;
+    border-radius: 10px;
 }
 
 /*---- Div2CardsPlan ------*/
@@ -155,6 +157,12 @@
     /* Adicione estilos conforme necessário */
 }
 
+/*----Footer--------*/
+
+.footer-section {
+    font-size: smaller;
+}
+
 /*---- Media queries ------*/
 @media (max-width: 767px) {
     body {
@@ -204,7 +212,7 @@
         right: 0;
         bottom: 0;
         background-color: #00bfff;
-        z-index: 1000;
+        z-index: 1100 !important; 
         display: none;
     }
 
